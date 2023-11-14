@@ -6,29 +6,16 @@ import { goToNextQuestion } from '../reducers/quiz';
 export const QuestionFeedbackPage = () => {
   const dispatch = useDispatch();
 
-  const showQuestionFeedback = useSelector(
-    state => state.quiz.showQuestionFeedback
-  );
-
   const currentQuestionIndex = useSelector(
     state => state.quiz.currentQuestionIndex
   );
-
   const answers = useSelector(state => state.quiz.answers);
-
-  const quiz = useSelector(state => state.quiz);
-
-  if (!showQuestionFeedback) {
-    return <></>;
-  }
-
-  console.log(quiz);
 
   const handleGoToNextQuestion = () => {
     dispatch(goToNextQuestion());
   };
 
-  if (!showQuestionFeedback) {
+  if (answers[currentQuestionIndex] == null) {
     return <></>;
   }
 

@@ -41,7 +41,6 @@ const initialState = {
   questions,
   answers: [],
   currentQuestionIndex: 0,
-  showQuestionFeedback: false,
   quizOver: false,
 };
 
@@ -99,22 +98,9 @@ export const quiz = createSlice({
     goToNextQuestion: state => {
       if (state.currentQuestionIndex + 1 === state.questions.length) {
         state.quizOver = true;
-        state.showQuestionFeedback = false;
       } else {
         state.currentQuestionIndex += 1;
-        state.showQuestionFeedback = false;
       }
-    },
-
-    /**
-     * Use this action to progress the quiz to the next question. If there's
-     * no more questions (the user was on the final question), set `quizOver`
-     * to `true`.
-     *
-     * This action does not require a payload.
-     */
-    goToQuestionFeedback: state => {
-      state.showQuestionFeedback = true;
     },
 
     /**

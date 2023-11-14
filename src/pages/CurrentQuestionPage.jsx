@@ -4,10 +4,12 @@ import { CurrentQuestion } from '../components/CurrentQuestion';
 import { AnswerOptions } from '../components/AnswerOptions';
 
 export const CurrentQuestionPage = () => {
-  const showQuestionFeedback = useSelector(
-    state => state.quiz.showQuestionFeedback
+  const currentQuestionIndex = useSelector(
+    state => state.quiz.currentQuestionIndex
   );
-  return showQuestionFeedback ? (
+
+  const answers = useSelector(state => state.quiz.answers);
+  return answers[currentQuestionIndex] != null ? (
     <></>
   ) : (
     <div>

@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
-import { Question } from "./Question";
+import { Question } from "./QuestionPage";
 import { AnswerOptions } from "./AnswerOptions";
 
-export const QuestionFeedback = () => {
+export const QuestionFeedbackPage = () => {
   const question = useSelector(
     (state) => state.quiz.questions[state.quiz.currentQuestionIndex]
   );
@@ -15,7 +15,7 @@ export const QuestionFeedback = () => {
   return (
     <div>
       <Question />
-      <AnswerOptions /> 
+      <AnswerOptions />
     </div>
   );
 };

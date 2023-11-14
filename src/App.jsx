@@ -1,15 +1,15 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { quiz } from './reducers/quiz';
+import React from "react";
+import { Provider } from "react-redux";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { quiz } from "./reducers/quiz";
 
-import { CurrentQuestion } from './components/CurrentQuestion';
-import { StartPage } from './components/StartPage';
-import { Summary } from './components/Summary';
-import {Header} from './components/Header'
+import { CurrentQuestionPage } from "./pages/CurrentQuestionPage";
+import { StartPage } from "./pages/StartPage";
+import { SummaryPage } from "./pages/SummaryPage";
+import { Header } from "./components/Header";
 
 const reducer = combineReducers({
-  quiz: quiz.reducer
+  quiz: quiz.reducer,
 });
 
 const store = configureStore({ reducer });
@@ -19,8 +19,8 @@ export const App = () => {
     <Provider store={store}>
       <Header />
       <StartPage />
-      <CurrentQuestion />
-      <Summary />
+      <CurrentQuestionPage />
+      <SummaryPage />
     </Provider>
   );
-}
+};

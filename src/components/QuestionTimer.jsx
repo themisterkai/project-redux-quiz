@@ -1,7 +1,4 @@
-// This is the component that will display the timer
+// This is the component that will display the timer for each question
 export const QuestionTimer = () => {
-  return (
-    <div>
-    </div>
-  );
+  return <div></div>;
 };

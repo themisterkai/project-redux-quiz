@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { Question } from "./Question";
 import { AnswerOptions } from "./AnswerOptions";
 
-export const CurrentQuestion = () => {
+export const QuestionFeedback = () => {
   const question = useSelector(
     (state) => state.quiz.questions[state.quiz.currentQuestionIndex]
   );
@@ -15,7 +15,7 @@ export const CurrentQuestion = () => {
   return (
     <div>
       <Question />
-      <AnswerOptions />
+      <AnswerOptions /> 
     </div>
   );
 };

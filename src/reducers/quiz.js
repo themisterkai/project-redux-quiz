@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // Change these to your own questions!
-const questions = [
+export const questions = [
   {
     id: 1,
     questionText: "Who set the Olympic record for the 100m dash in 2012?",
@@ -14,11 +14,33 @@ const questions = [
       "When was Michael Phelps last named male World Swimmer of the Year?",
     options: ["2012", "2014", "2016", "2018"],
     correctAnswerIndex: 2
+  },
+  {
+    id: 3,
+    questionText: "How many rings are on the Olympic flag?",
+    options: ["none", "5", "7", "4"],
+    correctAnswerIndex: 1
+  },
+
+  {
+    id: 4,
+    questionText:
+      "Orignally amazons only sold what kind of products?",
+    options: ["Books", "Toys", "Electronics", "none"],
+    correctAnswerIndex: 0
+  },
+  {
+    id: 5,
+    questionText:
+      "Which Swedish furniture company is known for its ready-to-assemble furniture and home accessories?",
+    options: ["IKEA", "H&M", "Volvo", "saab"],
+    correctAnswerIndex: 0
   }
+  
 ];
 
 const initialState = {
-  questions,
+   questions,
   answers: [],
   currentQuestionIndex: 0,
   quizOver: false

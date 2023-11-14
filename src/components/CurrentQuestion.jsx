@@ -1,8 +1,18 @@
-// This is the component that will display the question and image for the question
+import { useSelector } from 'react-redux';
+
 export const CurrentQuestion = () => {
+  const question = useSelector(
+    state => state.quiz.questions[state.quiz.currentQuestionIndex]
+  );
+
+  if (!question) {
+    return <h1>Oh no! I could not find the current question!</h1>;
+  }
+  console.log(question);
+
   return (
     <div>
-      <h1>Question Here</h1>
+      <h1>{question.questionText}</h1>
     </div>
   );
 };

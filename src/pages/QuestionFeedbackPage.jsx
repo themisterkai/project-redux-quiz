@@ -1,21 +1,46 @@
-import { useSelector } from "react-redux";
-import { Question } from "./QuestionPage";
-import { AnswerOptions } from "./AnswerOptions";
+import { useDispatch, useSelector } from 'react-redux';
+
+import { CurrentQuestion } from '../components/CurrentQuestion';
+import { goToNextQuestion } from '../reducers/quiz';
 
 export const QuestionFeedbackPage = () => {
-  const question = useSelector(
-    (state) => state.quiz.questions[state.quiz.currentQuestionIndex]
+  const dispatch = useDispatch();
+
+  const showQuestionFeedback = useSelector(
+    state => state.quiz.showQuestionFeedback
   );
 
-  // {question[questionIndex]}
-  if (!question) {
-    return <h1>Oh no! I could not find the current question!</h1>;
+  const currentQuestionIndex = useSelector(
+    state => state.quiz.currentQuestionIndex
+  );
+
+  const answers = useSelector(state => state.quiz.answers);
+
+  const quiz = useSelector(state => state.quiz);
+
+  if (!showQuestionFeedback) {
+    return <></>;
   }
+
+  console.log(quiz);
+
+  const handleGoToNextQuestion = () => {
+    dispatch(goToNextQuestion());
+  };
+
+  if (!showQuestionFeedback) {
+    return <></>;
+  }
+
+  const correct = answers[currentQuestionIndex].isCorrect;
 
   return (
     <div>
-      <Question />
-      <AnswerOptions />
+      <CurrentQuestion />
+      <div>
+        <div>{correct ? 'Correct!' : 'Incorrect!'}</div>
+        <button onClick={handleGoToNextQuestion}>Next Question</button>
+      </div>
     </div>
   );
 };

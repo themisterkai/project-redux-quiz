@@ -1,7 +1,3 @@
-
-
 export const StartPage = () => {
-  return (
-    <div>StartPage</div>
-  )
-}
+  return <div></div>;
+};

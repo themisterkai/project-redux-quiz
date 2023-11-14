@@ -1,12 +1,12 @@
-import React from "react";
-import { Provider } from "react-redux";
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { quiz } from "./reducers/quiz";
+import { Provider } from 'react-redux';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import { CurrentQuestionPage } from "./pages/CurrentQuestionPage";
-import { StartPage } from "./pages/StartPage";
-import { SummaryPage } from "./pages/SummaryPage";
-import { Header } from "./components/Header";
+import { Header } from './components/Header';
+import { CurrentQuestionPage } from './pages/CurrentQuestionPage';
+import { QuestionFeedbackPage } from './pages/QuestionFeedbackPage';
+import { StartPage } from './pages/StartPage';
+import { SummaryPage } from './pages/SummaryPage';
+import { quiz } from './reducers/quiz';
 
 const reducer = combineReducers({
   quiz: quiz.reducer,
@@ -20,6 +20,7 @@ export const App = () => {
       <Header />
       <StartPage />
       <CurrentQuestionPage />
+      <QuestionFeedbackPage />
       <SummaryPage />
     </Provider>
   );

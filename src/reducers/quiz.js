@@ -42,6 +42,8 @@ const initialState = {
   answers: [],
   currentQuestionIndex: 0,
   quizOver: false,
+  quizTimerState: false,
+ 
 };
 
 export const quiz = createSlice({
@@ -98,6 +100,7 @@ export const quiz = createSlice({
     goToNextQuestion: state => {
       if (state.currentQuestionIndex + 1 === state.questions.length) {
         state.quizOver = true;
+        state.quizTimerState = false;
       } else {
         state.currentQuestionIndex += 1;
       }
@@ -110,11 +113,16 @@ export const quiz = createSlice({
      *
      * This action does not require a payload.
      */
+    quizTimerStart:state =>{
+      state.quizTimerState = true;
+
+    },
+ 
     restart: () => {
       return initialState;
     },
   },
 });
 
-export const { submitAnswer, goToNextQuestion, goToQuestionFeedback, restart } =
+export const { submitAnswer, goToNextQuestion, goToQuestionFeedback, quizTimerStart,restart } =
   quiz.actions;

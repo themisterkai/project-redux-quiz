@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import { goToQuestionFeedback, submitAnswer } from "../reducers/quiz";
+import { submitAnswer } from "../reducers/quiz";
 
 export const AnswerOptions = () => {
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ export const AnswerOptions = () => {
     dispatch(
       submitAnswer({ questionId: answerOptions.id, answerIndex: answer })
     );
-    dispatch(goToQuestionFeedback());
+   
   };
 
   return (

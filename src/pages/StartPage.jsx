@@ -1,7 +1,13 @@
+import { useDispatch } from "react-redux";
+import { quizTimerStart } from "../reducers/quiz";
 import "./startPage.css";
 
 export const StartPage = () => {
   //const handleQuizTimer
+  const dispatch = useDispatch();
+ const handleStartQuiz = () =>{
+    dispatch(quizTimerStart(true))
+  }
 
   return (
     <div className="startPage">
@@ -12,7 +18,7 @@ export const StartPage = () => {
         <p>Time per question: 10 seconds</p>
         <p>Maximum points: 20 points (2 / question)</p>
       </div>
-      <button>Start quiz and timer!</button>
+      <button onClick={handleStartQuiz}>Start quiz and timer!</button>
     </div>
   );
 };

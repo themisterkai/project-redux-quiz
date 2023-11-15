@@ -1,0 +1,37 @@
+.feedbackContainer{
+    display: flex;
+    flex-wrap: wrap;
+  flex-direction: column;
+
+  text-align: center;
+  border: 1px solid black;
+
+
+}
+.feedbackOptionContainer{
+    display: flex;
+   
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 40px;
+    
+}
+
+.feedbackOptions {
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .feedbackOptions button{
+    width: 350px;
+    height: 35px;
+  }
+
+.nextButton {
+    width: 200px;
+    height: 35px;
+    margin-top: 30px;
+  }

@@ -1,38 +1,38 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 // Change these to your own questions!
 const questions = [
   {
     id: 1,
-    questionText: 'Who set the Olympic record for the 100m dash in 2012?',
-    options: ['Usain Bolt', 'Justin Gatlin', 'Tyson Gay', 'Asafa Powell'],
+    questionText: "Who set the Olympic record for the 100m dash in 2012?",
+    options: ["Usain Bolt", "Justin Gatlin", "Tyson Gay", "Asafa Powell"],
     correctAnswerIndex: 0,
   },
   {
     id: 2,
     questionText:
-      'When was Michael Phelps last named male World Swimmer of the Year?',
-    options: ['2012', '2014', '2016', '2018'],
+      "When was Michael Phelps last named male World Swimmer of the Year?",
+    options: ["2012", "2014", "2016", "2018"],
     correctAnswerIndex: 2,
   },
   {
     id: 3,
-    questionText: 'How many rings are on the Olympic flag?',
-    options: ['none', '5', '7', '4'],
+    questionText: "How many rings are on the Olympic flag?",
+    options: ["none", "5", "7", "4"],
     correctAnswerIndex: 1,
   },
 
   {
     id: 4,
-    questionText: 'Originally, Amazon only sold what kind of products?',
-    options: ['Books', 'Toys', 'Electronics', 'none'],
+    questionText: "Originally, Amazon only sold what kind of products?",
+    options: ["Books", "Toys", "Electronics", "none"],
     correctAnswerIndex: 0,
   },
   {
     id: 5,
     questionText:
-      'Which Swedish furniture company is known for its ready-to-assemble furniture and home accessories?',
-    options: ['IKEA', 'H&M', 'Volvo', 'saab'],
+      "Which Swedish furniture company is known for its ready-to-assemble furniture and home accessories?",
+    options: ["IKEA", "H&M", "Volvo", "saab"],
     correctAnswerIndex: 0,
   },
 ];
@@ -42,10 +42,11 @@ const initialState = {
   answers: [],
   currentQuestionIndex: 0,
   quizOver: false,
+  quizTimerState: false,
 };
 
 export const quiz = createSlice({
-  name: 'quiz',
+  name: "quiz",
   initialState,
   reducers: {
     /**
@@ -65,11 +66,11 @@ export const quiz = createSlice({
      */
     submitAnswer: (state, action) => {
       const { questionId, answerIndex } = action.payload;
-      const question = state.questions.find(q => q.id === questionId);
+      const question = state.questions.find((q) => q.id === questionId);
 
       if (!question) {
         throw new Error(
-          'Could not find question! Check to make sure you are passing the question id correctly.'
+          "Could not find question! Check to make sure you are passing the question id correctly."
         );
       }
 
@@ -95,9 +96,10 @@ export const quiz = createSlice({
      *
      * This action does not require a payload.
      */
-    goToNextQuestion: state => {
+    goToNextQuestion: (state) => {
       if (state.currentQuestionIndex + 1 === state.questions.length) {
         state.quizOver = true;
+        state.quizTimerState = false;
       } else {
         state.currentQuestionIndex += 1;
       }
@@ -110,11 +112,20 @@ export const quiz = createSlice({
      *
      * This action does not require a payload.
      */
+    quizTimerStart: (state) => {
+      state.quizTimerState = true;
+    },
+
     restart: () => {
       return initialState;
     },
   },
 });
 
-export const { submitAnswer, goToNextQuestion, goToQuestionFeedback, restart } =
-  quiz.actions;
+export const {
+  submitAnswer,
+  goToNextQuestion,
+  goToQuestionFeedback,
+  quizTimerStart,
+  restart,
+} = quiz.actions;

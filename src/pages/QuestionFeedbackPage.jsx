@@ -1,21 +1,23 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 
-import { CurrentQuestion } from '../components/CurrentQuestion';
-import { goToNextQuestion } from '../reducers/quiz';
-
+import { CurrentQuestion } from "../components/CurrentQuestion";
+import { goToNextQuestion } from "../reducers/quiz";
+import "./QuestionFeedbackPage.css";
 
 export const QuestionFeedbackPage = () => {
   const dispatch = useDispatch();
 
   const currentQuestionIndex = useSelector(
-    state => state.quiz.currentQuestionIndex
+    (state) => state.quiz.currentQuestionIndex
   );
-  const answers = useSelector(state => state.quiz.answers[currentQuestionIndex]);
+  const answers = useSelector(
+    (state) => state.quiz.answers[currentQuestionIndex]
+  );
 
-
-  const options = useSelector((state) => state.quiz.questions[currentQuestionIndex].options);
-  console.log("option in feedback" ,options);
-
+  const options = useSelector(
+    (state) => state.quiz.questions[currentQuestionIndex].options
+  );
+  const totalQuestions = useSelector((state) => state.quiz.questions.length);
 
   const handleGoToNextQuestion = () => {
     dispatch(goToNextQuestion());
@@ -27,19 +29,18 @@ export const QuestionFeedbackPage = () => {
 
   const correct = answers.isCorrect;
 
-
   return (
-    <div>
+    <div className="feedbackContainer">
       <CurrentQuestion />
-      <div>
-        <div>{correct ? 'Correct!' : 'Incorrect!'}</div>
-        {options.map((option,index)=>(
-          <div key={index}>
-          <button disabled> {option}</button>
+      <div className="feedbackOptionContainer">
+        <div>{correct ? "Correct!" : "Incorrect!"}</div>
+        {options.map((option, index) => (
+          <div key={index} className="feedbackOptions" >
+            <button disabled> {option}</button>
           </div>
         ))}
 
-        <button onClick={handleGoToNextQuestion}>Next Question</button>
+        <button  className ="nextButton" onClick={handleGoToNextQuestion}>{currentQuestionIndex < totalQuestions-1 ? "Next Question" : "Check score"}</button>
       </div>
     </div>
   );

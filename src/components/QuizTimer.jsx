@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 export const QuizTimer = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [timer, setTimer] = useState(0);
-  const start = useSelector((state)=> state.quiz.currentQuestionIndex);
-  const stop =  useSelector((state) => state.quiz.questions.length);
+  const start = useSelector((state) => state.quiz.quizTimerState);
 
   const getTime = () => {
     setTimer((prevTimer) => prevTimer + 1000); // Increment by 1000 milliseconds
@@ -21,12 +20,12 @@ export const QuizTimer = () => {
   useEffect(() => {
     let interval;
 
-    if (start >= 0 && start < stop-1) {
+    if (start) {
       interval = setInterval(() => getTime(), 1000);
     }
 
     return () => clearInterval(interval);
-  }, [timer, start, stop]);
+  }, [timer, start]);
 
   return (
     <div>

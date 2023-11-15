@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import "./currentQuestionPage.css";
 import { CurrentQuestion } from "../components/CurrentQuestion";
 import { AnswerOptions } from "../components/AnswerOptions";
+import { QuestionTimer } from "../components/QuestionTimer";
 
 export const CurrentQuestionPage = () => {
   const currentQuestionIndex = useSelector(
@@ -14,6 +15,7 @@ export const CurrentQuestionPage = () => {
   ) : (
     <div className="questionPage">
       <CurrentQuestion />
+      <QuestionTimer />
       <AnswerOptions />
     </div>
   );

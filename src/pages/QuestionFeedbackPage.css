@@ -1,51 +1,48 @@
-.feedbackContainer{
-    display: flex;
-    flex-wrap: wrap;
+.feedbackContainer {
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 
   text-align: center;
   border: 1px solid black;
-
-
 }
-.feedbackOptionContainer{
-    display: flex;
-   
-    flex-direction: column;
+.feedbackOptionContainer {
+  display: flex;
 
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin: 40px;
-    
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 40px;
 }
 
 .feedbackOptions {
-    display: flex;
-    flex-direction: column;
-   
-  }
-  .nextButton {
-    width: 200px;
-    height: 35px;
-    margin-top: 30px;
-    border-radius: 15px; 
-  }
-  .feedbackBtn {
-    width: 350px;
-    height: 35px;
-    background-color: gray;
-    color: black;
-    border-radius: 15px; 
-    
-  }
+  display: flex;
+  flex-direction: column;
+}
 
-  .correct {
-    background-color: green; 
-    color: black;
-  }
-  
-  .incorrect {
-    background-color: red; 
-    color: black;
-  }
+.nextButton {
+  width: 200px;
+  height: 35px;
+  margin-top: 30px;
+  border-radius: 15px;
+}
+
+.feedbackBtn {
+  width: 350px;
+  height: 35px;
+  background-color: gray;
+  color: black;
+  border-radius: 15px;
+}
+
+.correct {
+  background-color: green;
+  color: black;
+}
+
+.incorrect {
+  background-color: red;
+  color: black;
+}

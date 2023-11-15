@@ -1,0 +1,22 @@
+.questionPage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  text-align: center;
+  border: 1px solid black;
+}
+.questionText {
+  display: flex;
+  flex-wrap: wrap;
+}
+.answerOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 40px;
+}
+.answerOptions button {
+  width: 350px;
+  height: 35px;
+}

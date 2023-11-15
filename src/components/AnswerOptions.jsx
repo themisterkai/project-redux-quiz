@@ -1,14 +1,14 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 
-import { goToQuestionFeedback, submitAnswer } from '../reducers/quiz';
+import { goToQuestionFeedback, submitAnswer } from "../reducers/quiz";
 
 export const AnswerOptions = () => {
   const dispatch = useDispatch();
   const answerOptions = useSelector(
-    state => state.quiz.questions[state.quiz.currentQuestionIndex]
+    (state) => state.quiz.questions[state.quiz.currentQuestionIndex]
   );
 
-  const handleSubmitAnswer = answer => {
+  const handleSubmitAnswer = (answer) => {
     dispatch(
       submitAnswer({ questionId: answerOptions.id, answerIndex: answer })
     );
@@ -17,7 +17,7 @@ export const AnswerOptions = () => {
 
   return (
     <>
-      <div>
+      <div className="answerOptions">
         {answerOptions.options.map((option, idx) => (
           <div key={option}>
             <button onClick={() => handleSubmitAnswer(idx)}>{option}</button>

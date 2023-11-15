@@ -21,5 +21,5 @@ export const ScoreCounter = () => {
     }
   }, [answers, currentQuestionIndex]);
 
-  return <div>Total score: {score}</div>;
+  return <> {score}</>;
 };

@@ -28,8 +28,8 @@ export const QuizTimer = () => {
   }, [timer, start]);
 
   return (
-    <div>
-      Quiz Timer: {minutes} minutes {seconds} seconds
-    </div>
+    <>
+       {minutes} minutes {seconds} seconds
+    </>
   );
 };

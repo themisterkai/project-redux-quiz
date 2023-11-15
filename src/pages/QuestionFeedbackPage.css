@@ -27,6 +27,8 @@
   height: 35px;
   margin-top: 30px;
   border-radius: 15px;
+  background-color:  rgb(162, 244, 186);
+  border: none;
 }
 
 .feedbackBtn {

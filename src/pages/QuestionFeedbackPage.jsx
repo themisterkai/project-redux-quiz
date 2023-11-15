@@ -11,11 +11,14 @@ export const QuestionFeedbackPage = () => {
   const correctAnswerIndex = useSelector((state) => state.quiz.questions[currentQuestionIndex].correctAnswerIndex);
   const totalQuestions = useSelector((state) => state.quiz.questions.length);
 
+  const quizStop = useSelector((state) => state.quiz.quizTimerState);
+
+
   const handleGoToNextQuestion = () => {
     dispatch(goToNextQuestion());
   };
 
-  if (answers == null) {
+  if (answers == null || !quizStop) {
     return <></>;
   }
 

@@ -25,13 +25,27 @@
     flex-direction: column;
    
   }
-  .feedbackOptions button{
-    width: 350px;
-    height: 35px;
-  }
-
-.nextButton {
+  .nextButton {
     width: 200px;
     height: 35px;
     margin-top: 30px;
+    border-radius: 15px; 
+  }
+  .feedbackBtn {
+    width: 350px;
+    height: 35px;
+    background-color: gray;
+    color: black;
+    border-radius: 15px; 
+    
+  }
+
+  .correct {
+    background-color: green; 
+    color: black;
+  }
+  
+  .incorrect {
+    background-color: red; 
+    color: black;
   }

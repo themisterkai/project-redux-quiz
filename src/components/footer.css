@@ -8,8 +8,8 @@
 } */
 
 .footer {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
-  padding: 10px; 
+  padding: 10px;
   text-align: center;
 }

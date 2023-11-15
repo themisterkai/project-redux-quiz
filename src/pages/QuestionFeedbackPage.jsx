@@ -1,9 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { CurrentQuestion } from "../components/CurrentQuestion";
 import { goToNextQuestion } from "../reducers/quiz";
+import { SummaryPage } from "./SummaryPage";
 import "./QuestionFeedbackPage.css";
 
 export const QuestionFeedbackPage = () => {
+  const quizState = useSelector((state) => state.quiz);
+  const quizOver = quizState.quizOver;
   const dispatch = useDispatch();
   const currentQuestionIndex = useSelector(
     (state) => state.quiz.currentQuestionIndex
@@ -21,13 +24,15 @@ export const QuestionFeedbackPage = () => {
 
   const quizStop = useSelector((state) => state.quiz.quizTimerState);
 
-
   const handleGoToNextQuestion = () => {
     dispatch(goToNextQuestion());
   };
 
-  if (answers == null || !quizStop) {
+  if (answers == null /*|| !quizStop*/) {
     return <></>;
+  }
+  if (quizOver) {
+    return <SummaryPage />;
   }
 
   const correct = answers.isCorrect;

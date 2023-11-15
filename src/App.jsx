@@ -5,7 +5,6 @@ import { Header } from "./components/Header";
 import { CurrentQuestionPage } from "./pages/CurrentQuestionPage";
 import { QuestionFeedbackPage } from "./pages/QuestionFeedbackPage";
 import { StartPage } from "./pages/StartPage";
-import { SummaryPage } from "./pages/SummaryPage";
 import { quiz } from "./reducers/quiz";
 import { Footer } from "./components/Footer";
 
@@ -22,7 +21,6 @@ export const App = () => {
       <StartPage />
       <CurrentQuestionPage />
       <QuestionFeedbackPage />
-      <SummaryPage />
       <Footer />
     </Provider>
   );

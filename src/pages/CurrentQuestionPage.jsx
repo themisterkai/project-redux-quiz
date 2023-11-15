@@ -15,6 +15,8 @@ export const CurrentQuestionPage = () => {
   const quizNotStarted = !quizOver && !quizTimerState;
   const hasAnswers = answers[currentQuestionIndex] != null;
 
+  //move to summaryPage if last question
+
   if (hasAnswers || quizNotStarted) {
     return <></>;
   }

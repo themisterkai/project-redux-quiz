@@ -1,7 +1,15 @@
-.footer {
+/* .footer {
   display: flex;
   flex-wrap: wrap;
 
   border: 1px solid black;
   justify-content: center;
+  
+} */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding: 10px; 
+  text-align: center;
 }

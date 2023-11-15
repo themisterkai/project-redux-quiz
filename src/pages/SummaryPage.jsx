@@ -21,7 +21,7 @@ export const SummaryPage = () => {
         You score: <ScoreCounter />{" "}
       </h2>
       <ul>
-        {answers.map(({ questionId, isCorrect }) => (
+        {answers.map(({ questionId, isCorrect, answerIndex }) => (
           <li key={questionId}>
             <p className={isCorrect ? "green" : "red"}>
               {`
@@ -30,8 +30,11 @@ export const SummaryPage = () => {
               ${
                 questions.filter(({ id }) => id === questionId)[0].questionText
               } - 
+  
               ${
-                isCorrect
+                answerIndex === 4
+                  ? "You didn't answer in time ⏰"
+                  : isCorrect
                   ? "You answered correct!"
                   : "You answered incorrect 😞"
               }

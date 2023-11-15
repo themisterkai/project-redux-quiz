@@ -19,4 +19,13 @@
 .answerOptions button {
   width: 350px;
   height: 35px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(162, 244, 186);
+}
+
+.answerOptions button:hover {
+  background-color: rgb(75, 164, 102);
+  cursor: pointer;
+  color: white;
 }

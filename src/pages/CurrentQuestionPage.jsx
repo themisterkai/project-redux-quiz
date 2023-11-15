@@ -1,18 +1,25 @@
-import { useSelector } from "react-redux";
-import "./currentQuestionPage.css";
-import { CurrentQuestion } from "../components/CurrentQuestion";
-import { AnswerOptions } from "../components/AnswerOptions";
-import { QuestionTimer } from "../components/QuestionTimer";
+import { useSelector } from 'react-redux';
+
+import { AnswerOptions } from '../components/AnswerOptions';
+import { CurrentQuestion } from '../components/CurrentQuestion';
+import { QuestionTimer } from '../components/QuestionTimer';
+import './currentQuestionPage.css';
 
 export const CurrentQuestionPage = () => {
-  const currentQuestionIndex = useSelector(
-    (state) => state.quiz.currentQuestionIndex
-  );
+  const quizState = useSelector(state => state.quiz);
+  const currentQuestionIndex = quizState.currentQuestionIndex;
+  const answers = quizState.answers;
+  const quizOver = quizState.quizOver;
+  const quizTimerState = quizState.quizTimerState;
 
-  const answers = useSelector((state) => state.quiz.answers);
-  return answers[currentQuestionIndex] != null ? (
-    <></>
-  ) : (
+  const quizNotStarted = !quizOver && !quizTimerState;
+  const hasAnswers = answers[currentQuestionIndex] != null;
+
+  if (hasAnswers || quizNotStarted) {
+    return <></>;
+  }
+
+  return (
     <div className="questionPage">
       <CurrentQuestion />
       <QuestionTimer />

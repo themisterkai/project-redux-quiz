@@ -1,12 +1,22 @@
-import { useDispatch } from "react-redux";
-import { quizTimerStart } from "../reducers/quiz";
-import "./startPage.css";
+import { useDispatch, useSelector } from 'react-redux';
+
+import { quizTimerStart } from '../reducers/quiz';
+import './startPage.css';
 
 export const StartPage = () => {
-  //const handleQuizTimer
   const dispatch = useDispatch();
- const handleStartQuiz = () =>{
-    dispatch(quizTimerStart(true))
+  const handleStartQuiz = () => {
+    dispatch(quizTimerStart(true));
+  };
+
+  const quizState = useSelector(state => state.quiz);
+  const quizOver = quizState.quizOver;
+  const quizTimerState = quizState.quizTimerState;
+
+  const showStartPage = !quizOver && !quizTimerState;
+
+  if (!showStartPage) {
+    return <></>;
   }
 
   return (

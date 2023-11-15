@@ -9,10 +9,11 @@ export const QuestionTimer = () => {
   const index = useSelector(
     (state) => state.quiz.questions[state.quiz.currentQuestionIndex]
   );
-  const answer = useSelector(
-    (state) =>
-      state.quiz.questions[state.quiz.currentQuestionIndex].correctAnswerIndex
-  );
+  // const answer = useSelector(
+  //   (state) =>
+  //     state.quiz.questions[state.quiz.currentQuestionIndex].correctAnswerIndex
+  // );
+  const notAnswered = 4;
 
   const dispatch = useDispatch();
   let intervalRef = useRef();
@@ -38,25 +39,29 @@ export const QuestionTimer = () => {
     return () => clearInterval(intervalRef.current);
   }, [timeLeft]);
 
-  const selectAnswer = () => {
-    if (answer >= 0 && answer < 3) {
-      // console.log("return index answer", answer + 1);
-      return answer + 1;
-    } else return answer - 1;
-  };
+  // const selectAnswer = () => {
+  //   if (answer >= 0 && answer < 3) {
+  //     // console.log("return index answer", answer + 1);
+  //     return answer + 1;
+  //   } else return answer - 1;
+  // };
 
-  let incorrect;
+  //let incorrect;
   useEffect(() => {
     if (timeIsUp) {
-      incorrect = selectAnswer();
-      dispatch(submitAnswer({ questionId: index.id, answerIndex: incorrect }));
+      //incorrect = selectAnswer();
+      dispatch(
+        submitAnswer({
+          questionId: index.id,
+          answerIndex: 4,
+        })
+      );
     }
   }, [timeIsUp]);
 
   return (
     <div>
-      <p>Time left: {timeLeft}</p>
-      {timeIsUp && <h3>Time ran out! You lost a point 😞</h3>}
+      <p>Time left: {timeLeft} seconds</p>
     </div>
   );
 };

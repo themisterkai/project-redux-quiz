@@ -14,8 +14,8 @@ export const StartPage = () => {
   const quizTimerState = quizState.quizTimerState;
 
   const showStartPage = !quizOver && !quizTimerState;
-
-  if (!showStartPage) {
+  
+  if (!showStartPage  ) {
     return <></>;
   }
 

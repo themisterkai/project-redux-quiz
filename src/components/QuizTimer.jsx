@@ -29,7 +29,7 @@ export const QuizTimer = () => {
 
   return (
     <div>
-      Timer: {minutes} minutes {seconds} seconds
+      Quiz Timer: {minutes} minutes {seconds} seconds
     </div>
   );
 };

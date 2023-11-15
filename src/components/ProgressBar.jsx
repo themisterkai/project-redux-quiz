@@ -8,7 +8,6 @@ export const ProgressBar = () => {
   const currenQuestion = useSelector(
     (state) => state.quiz.currentQuestionIndex
   );
-  console.log("total lenght", totalQuestions);
   return (
     <>
       <div className="progressBarContainer">

@@ -49,7 +49,6 @@ export const QuestionTimer = () => {
   //let incorrect;
   useEffect(() => {
     if (timeIsUp) {
-      //incorrect = selectAnswer();
       dispatch(
         submitAnswer({
           questionId: index.id,

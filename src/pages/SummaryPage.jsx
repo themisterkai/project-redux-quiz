@@ -3,8 +3,10 @@ import { ScoreCounter } from "../components/ScoreCounter";
 
 export const SummaryPage = () => {
   const quizStop = useSelector((state) => state.quiz.quizTimerState);
+  const quizOver = useSelector((state) => state.quiz.quizOver)
 
-    if (quizStop)
+ 
+    if (quizStop   || !quizOver)
     {
       return <></>;
     }

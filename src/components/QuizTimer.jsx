@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setQuizTimer } from "../reducers/quiz";
 
 export const QuizTimer = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [timer, setTimer] = useState(0);
   const start = useSelector((state) => state.quiz.quizTimerState);
+  const dispatch = useDispatch();
 
+  
   const getTime = () => {
     setTimer((prevTimer) => prevTimer + 1000); 
 
@@ -15,8 +18,13 @@ export const QuizTimer = () => {
 
     setMinutes(newMinutes);
     setSeconds(newSeconds);
+
+    dispatch(setQuizTimer({ minutes: newMinutes, seconds: newSeconds }));
+   
+
   };
 
+ 
   useEffect(() => {
     let interval;
 
@@ -26,6 +34,8 @@ export const QuizTimer = () => {
 
     return () => clearInterval(interval);
   }, [timer, start]);
+
+
 
   return (
     <>

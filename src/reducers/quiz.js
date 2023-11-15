@@ -49,6 +49,7 @@ const initialState = {
   currentQuestionIndex: 0,
   quizOver: false,
   quizTimerState: false,
+  quizTimer :{minutes:0,seconds:0}
  
 };
 
@@ -123,6 +124,11 @@ export const quiz = createSlice({
       state.quizTimerState = true;
 
     },
+    setQuizTimer:(state,action) =>{
+     
+      state.quizTimer.minutes = action.payload.minutes;
+      state.quizTimer.seconds = action.payload.seconds;
+    },
  
     restart: () => {
       return initialState;
@@ -130,5 +136,5 @@ export const quiz = createSlice({
   },
 });
 
-export const { submitAnswer, goToNextQuestion, goToQuestionFeedback, quizTimerStart,restart } =
+export const { submitAnswer, goToNextQuestion, goToQuestionFeedback, quizTimerStart,setQuizTimer,restart } =
   quiz.actions;

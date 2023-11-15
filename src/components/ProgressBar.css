@@ -1,0 +1,28 @@
+.progressBarContainer {
+    display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  align-items: center;
+  margin-top: 20px; 
+   
+  }
+  
+  .progressBar {
+    width: 100%;
+    height: 20px; 
+    border: none;
+    border-radius: 15px; 
+    background-color: #f0f0f0; 
+  }
+  
+  .progressBar::-webkit-progress-value {
+    background-color:  rgb(75, 164, 102);
+
+    border-radius: 10px; 
+  }
+  
+  span {
+    text-align: left;
+    margin-top: 5px; 
+  }
+  

@@ -7,6 +7,8 @@
 }
 .keepTrack {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  /* justify-content: space-around; */
   align-items: center;
+  
 }

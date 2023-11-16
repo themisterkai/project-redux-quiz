@@ -38,7 +38,7 @@ export const QuestionFeedbackPage = () => {
   const correct = answers.isCorrect;
 
   return (
-    <div className="feedbackContainer">
+    <div className="questionPage">
       <CurrentQuestion />
       <div className="feedbackOptionContainer">
         <div>

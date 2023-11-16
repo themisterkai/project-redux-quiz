@@ -1,7 +1,7 @@
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 export const CurrentQuestion = () => {
-  const quizState = useSelector(state => state.quiz);
+  const quizState = useSelector((state) => state.quiz);
   const currentQuestionIndex = quizState.currentQuestionIndex;
   const question = quizState.questions[currentQuestionIndex];
   const answers = quizState.answers;
@@ -17,7 +17,7 @@ export const CurrentQuestion = () => {
     if (answers[currentQuestionIndex].isCorrect) {
       imageURL = `./correct/${question.id}.gif`;
     } else {
-      if (answers[currentQuestionIndex].answer === 'not answered') {
+      if (answers[currentQuestionIndex].answer === "not answered") {
         imageURL = `./timesup/${question.id}.gif`;
       } else {
         imageURL = `./incorrect/${question.id}.gif`;

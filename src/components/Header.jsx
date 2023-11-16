@@ -1,6 +1,7 @@
-import './header.css';
-import { ProgressBar } from './ProgressBar';
-import { QuizTimer } from './QuizTimer';
+import "./header.css";
+import { ProgressBar } from "./ProgressBar";
+import { QuizTimer } from "./QuizTimer";
+import { ScoreCounter } from "./ScoreCounter";
 
 export const Header = () => {
   return (
@@ -8,8 +9,11 @@ export const Header = () => {
       <h1>How Swedish are you? 🇸🇪</h1>
       <div className="keepTrack">
         <QuizTimer />
-        <ProgressBar />
+        <p>
+          Points: <ScoreCounter />
+        </p>
       </div>
+      <ProgressBar />
     </div>
   );
 };

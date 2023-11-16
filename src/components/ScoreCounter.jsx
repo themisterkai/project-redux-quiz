@@ -14,8 +14,11 @@ export const ScoreCounter = () => {
       if (answer !== undefined) {
         if (answer.isCorrect) {
           setScore((prevScore) => prevScore + 2);
+          console.log("score added",score);
+
         } else {
           setScore((prevScore) => prevScore - 1);
+          console.log("score subtracted",score);
         }
       }
     }

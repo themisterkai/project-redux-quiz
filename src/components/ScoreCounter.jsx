@@ -9,5 +9,5 @@ export const ScoreCounter = () => {
     0
   );
 
-  return <> {score}</>;
+  return <>{score}</>;
 };

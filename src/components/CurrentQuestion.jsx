@@ -11,7 +11,7 @@ export const CurrentQuestion = () => {
 
   return (
     <div className="questionText">
-      <h1>{question.questionText}</h1>
+      <h2>{question.questionText}</h2>
       <img src={`./` + question.id + `.jpg`} />
     </div>
   );

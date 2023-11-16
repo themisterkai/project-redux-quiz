@@ -7,8 +7,8 @@
   border: 1px solid black;
 }
 .questionText {
-  display: flex;
-  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
 }
 .answerOptions {
   display: flex;
@@ -17,7 +17,8 @@
   margin: 40px;
 }
 .answerOptions button {
-  width: 350px;
+  width: 95%;
+  max-width: 350px;
   height: 35px;
   border: none;
   border-radius: 12px;

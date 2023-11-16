@@ -27,8 +27,9 @@ export const StartPage = () => {
         <p>Number of questions: 10</p>
         <p>Time per question: 10 seconds</p>
         <p>Maximum points: 20 points (2 / question)</p>
+        <button onClick={handleStartQuiz}>Start quiz and timer!</button>
       </div>
-      <button onClick={handleStartQuiz}>Start quiz and timer!</button>
+      
     </div>
   );
 };

@@ -11,16 +11,16 @@ export const CurrentQuestion = () => {
     return <h1>Oh no! I could not find the current question!</h1>;
   }
 
-  let imageURL = `./` + question.id + `.jpg`;
+  let imageURL = `./${question.id}.jpg`;
 
   if (hasAnswers) {
     if (answers[currentQuestionIndex].isCorrect) {
-      imageURL = './correct.gif';
+      imageURL = `./correct/${question.id}.gif`;
     } else {
       if (answers[currentQuestionIndex].answer === 'not answered') {
-        imageURL = './timesup.gif';
+        imageURL = `./timesup/${question.id}.gif`;
       } else {
-        imageURL = './incorrect.gif';
+        imageURL = `./incorrect/${question.id}.gif`;
       }
     }
   }

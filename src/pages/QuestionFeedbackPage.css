@@ -8,39 +8,41 @@
 .feedbackOptionContainer {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin: 40px;
 }
 
-.nextButton {
+/* .nextButton {
   width: 200px;
   height: 35px;
   margin-top: 30px;
   border-radius: 15px;
-  background-color:  rgb(0, 106, 167);
+  background-color: rgb(0, 80, 157);
   border: none;
-}
+  color: rgb(255, 203, 5);
+} */
 
 .nextButton:hover {
-  background-color:rgb(254, 204, 2);
+  /* background-color: rgb(254, 204, 2); */
   cursor: pointer;
-  color: white;
+  opacity: 0.7;
+  /* color: white; */
 }
 
 .feedbackButton {
-  background-color: gray;
-  color: white;
+  background-color: rgb(255, 203, 5);
+  color: rgb(17, 41, 107);
   width: 95%;
   max-width: 350px;
   height: 35px;
   border: none;
   border-radius: 12px;
+  opacity: 0.7;
 }
 
 .correct {
-  background-color: green;
+  background-color: rgb(255, 203, 5);
+  opacity: 1;
 }
 
-.incorrect {
-  background-color: red;
-}
+/* .incorrect {
+  background-color: rgb(255, 203, 5);
+} */

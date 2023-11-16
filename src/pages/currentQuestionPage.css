@@ -19,8 +19,6 @@
 .answerOptions {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin: 40px;
 }
 
 .answerOptions button {
@@ -29,12 +27,13 @@
   height: 35px;
   border: none;
   border-radius: 12px;
-  background-color: rgb(0, 106, 167);
+  background-color: rgb(0, 80, 157);
   color: white;
 }
 
 .answerOptions button:hover {
-  background-color: rgb(254, 204, 2);
+  /* background-color: rgb(254, 204, 2); */
+  opacity: 0.7;
   cursor: pointer;
   color: white;
 }

@@ -1,45 +1,121 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// Change these to your own questions!
 const questions = [
   {
     id: 1,
-    questionText: "Who set the Olympic record for the 100m dash in 2012?",
+    questionText:
+      'Which medieval castle in Stockholm is considered one of the most well-preserved castles in Sweden?',
     options: [
-      "Usain Bolt",
-      "Justin Gatlin",
-      "Tyson Gay",
-      "Asafa Powell",
-      "not answered",
+      'Kalmar Castle',
+      'Vadstena Castle',
+      'Örebro Castle',
+      'Stockholm Palace',
+      'not answered',
     ],
-    correctAnswerIndex: 0,
+    correctAnswerIndex: 2,
   },
   {
     id: 2,
     questionText:
-      "When was Michael Phelps last named male World Swimmer of the Year?",
-    options: ["2012", "2014", "2016", "2018", "not answered"],
-    correctAnswerIndex: 2,
+      "Who is the Swedish author known for the Millennium series, including 'The Girl with the Dragon Tattoo'?",
+    options: [
+      'Henning Mankell',
+      'Stieg Larsson',
+      'Camilla Läckberg',
+      'Jo Nesbø',
+      'not answered',
+    ],
+    correctAnswerIndex: 1,
   },
   {
     id: 3,
-    questionText: "How many rings are on the Olympic flag?",
-    options: ["none", "5", "7", "4", "not answered"],
-    correctAnswerIndex: 1,
+    questionText: 'In what year did Sweden join the European Union?',
+    options: ['1995', '2000', '2004', '2008', 'not answered'],
+    correctAnswerIndex: 0,
   },
-
   {
     id: 4,
-    questionText: "Originally, Amazon only sold what kind of products?",
-    options: ["Books", "Toys", "Electronics", "none", "not answered"],
-    correctAnswerIndex: 0,
+    questionText:
+      'Which Swedish company is a leading provider of mobile communication technology?',
+    options: ['Volvo', 'Ericsson', 'H&M', 'IKEA', 'not answered'],
+    correctAnswerIndex: 1,
   },
   {
     id: 5,
     questionText:
-      "Which Swedish furniture company is known for its ready-to-assemble furniture and home accessories?",
-    options: ["IKEA", "H&M", "Volvo", "saab", "not answered"],
+      'What is the traditional Swedish dish made of pickled herring, potatoes, and sour cream?',
+    options: [
+      'Gravlax',
+      'Köttbullar',
+      'Surströmming',
+      'Sill och potatis',
+      'not answered',
+    ],
+    correctAnswerIndex: 3,
+  },
+  {
+    id: 6,
+    questionText:
+      'Sweden is located on the Scandinavian Peninsula in Northern Europe and shares land borders with which two countries?',
+    options: [
+      'Norway and Finland',
+      'Denmark and Finland',
+      'Norway and Denmark',
+      'Norway and Russia',
+      'not answered',
+    ],
+    correctAnswerIndex: 2,
+  },
+  {
+    id: 7,
+    questionText:
+      'Which Swedish scientist is known as the father of modern taxonomy and binomial nomenclature?',
+    options: [
+      'Carl Linnaeus',
+      'Alfred Nobel',
+      'Anders Celsius',
+      'Gustav Dalén',
+      'not answered',
+    ],
     correctAnswerIndex: 0,
+  },
+  {
+    id: 8,
+    questionText: 'What is the famous ice hotel located in Sweden called?',
+    options: [
+      'Frosty Lodge',
+      'Glacier Palace',
+      'Ice Kingdom',
+      'ICEHOTEL',
+      'not answered',
+    ],
+    correctAnswerIndex: 3,
+  },
+  {
+    id: 9,
+    questionText:
+      "Which event is celebrated on June 6th and is considered Sweden's National Day?",
+    options: [
+      "Midsummer's Day",
+      'Christmas',
+      'Independence Day',
+      'Constitution Day',
+      'not answered',
+    ],
+    correctAnswerIndex: 2,
+  },
+  {
+    id: 10,
+    questionText:
+      'What is the name of the Swedish traditional celebration involving a maypole, flowers, and dancing around the pole?',
+    options: [
+      'Walpurgis Night',
+      'Midsommar',
+      'Lucia Day',
+      'Valborgsmässoafton',
+      'not answered',
+    ],
+    correctAnswerIndex: 1,
   },
 ];
 
@@ -49,8 +125,7 @@ const initialState = {
   currentQuestionIndex: 0,
   quizOver: false,
   quizTimerState: false,
-  quizTimer :{minutes:0,seconds:0}
- 
+  quizTimer: { minutes: 0, seconds: 0 },
 };
 
 export const quiz = createSlice({
@@ -120,21 +195,26 @@ export const quiz = createSlice({
      *
      * This action does not require a payload.
      */
-    quizTimerStart:state =>{
+    quizTimerStart: state => {
       state.quizTimerState = true;
-
     },
-    setQuizTimer:(state,action) =>{
-     
+
+    setQuizTimer: (state, action) => {
       state.quizTimer.minutes = action.payload.minutes;
       state.quizTimer.seconds = action.payload.seconds;
     },
- 
+
     restart: () => {
       return initialState;
     },
   },
 });
 
-export const { submitAnswer, goToNextQuestion, goToQuestionFeedback, quizTimerStart,setQuizTimer,restart } =
-  quiz.actions;
+export const {
+  submitAnswer,
+  goToNextQuestion,
+  goToQuestionFeedback,
+  quizTimerStart,
+  setQuizTimer,
+  restart,
+} = quiz.actions;

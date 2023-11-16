@@ -40,5 +40,6 @@ export const SummaryPage = () => {
 
       <button onClick={handleShowSummary}>Try again?</button>
     </div>
+    
   );
 };

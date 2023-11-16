@@ -1,9 +1,15 @@
 .summaryContainer {
-  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  min-height: 700px;
+  height: 100%;
+  margin: 20px;
+}
+.summaryContainer ul {
+  padding: 0;
 }
 
 .summaryContainer li {

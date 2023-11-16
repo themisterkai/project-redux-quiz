@@ -1,9 +1,9 @@
-.feedbackContainer {
+/* .feedbackContainer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   text-align: center;
-}
+} */
 
 .feedbackOptionContainer {
   display: flex;
@@ -20,12 +20,12 @@
   color: rgb(255, 203, 5);
 } */
 
-.nextButton:hover {
-  /* background-color: rgb(254, 204, 2); */
+/* .nextButton:hover {
+  background-color: rgb(254, 204, 2);
   cursor: pointer;
   opacity: 0.7;
-  /* color: white; */
-}
+  color: white;
+} */
 
 .feedbackButton {
   background-color: rgb(255, 203, 5);

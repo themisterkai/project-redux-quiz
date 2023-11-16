@@ -12,16 +12,15 @@
   width: 80%;
   height: 15px;
   border: none;
-  border-radius: 15px;
-  background-color: #f0f0f0;
 }
 
 .progressBar::-webkit-progress-bar {
   border-radius: 10px;
+  background-color: rgb(0, 106, 167);
 }
 
 .progressBar::-webkit-progress-value {
-  background-color: rgb(162, 244, 186);
+  background-color: rgb(254, 204, 2);
   border-radius: 10px;
 }
 

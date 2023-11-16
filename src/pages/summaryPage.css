@@ -5,17 +5,21 @@
   gap: 10px;
   justify-content: center;
 }
+
 .summaryContainer li {
   list-style: none;
 }
+
 .summaryContainer button {
   width: 200px;
   height: 35px;
   align-self: center;
 }
+
 .green {
   color: green;
 }
+
 .red {
   color: red;
 }

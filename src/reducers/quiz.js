@@ -71,7 +71,7 @@ const questions = [
     questionText:
       'Which Swedish scientist is known as the father of modern taxonomy and binomial nomenclature?',
     options: [
-      'Carl Linnaeus',
+      'Carl von Linné',
       'Alfred Nobel',
       'Anders Celsius',
       'Gustav Dalén',

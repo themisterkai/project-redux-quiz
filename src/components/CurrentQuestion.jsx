@@ -12,7 +12,7 @@ export const CurrentQuestion = () => {
   return (
     <div className="questionText">
       <h1>{question.questionText}</h1>
-      <img src={`./` + question.id + `.jpg`} />;
+      <img src={`./` + question.id + `.jpg`} />
     </div>
   );
 };

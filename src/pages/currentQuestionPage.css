@@ -12,8 +12,16 @@
 
 .questionText img {
   width: 350px;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
+}
+
+@media (max-width: 667px) {
+  .questionText img {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
 }
 
 .answerOptions {

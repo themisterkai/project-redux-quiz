@@ -6,20 +6,12 @@
   text-align: center;
   border: 1px solid black;
 }
+
 .feedbackOptionContainer {
   display: flex;
-
   flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
   gap: 15px;
   margin: 40px;
-}
-
-.feedbackOptions {
-  display: flex;
-  flex-direction: column;
 }
 
 .nextButton {
@@ -27,24 +19,30 @@
   height: 35px;
   margin-top: 30px;
   border-radius: 15px;
-  background-color:  rgb(162, 244, 186);
+  background-color: rgb(162, 244, 186);
   border: none;
 }
 
-.feedbackBtn {
-  width: 350px;
-  height: 35px;
+.nextButton:hover {
+  background-color: rgb(75, 164, 102);
+  cursor: pointer;
+  color: white;
+}
+
+.feedbackButton {
   background-color: gray;
-  color: black;
-  border-radius: 15px;
+  color: white;
+  width: 95%;
+  max-width: 350px;
+  height: 35px;
+  border: none;
+  border-radius: 12px;
 }
 
 .correct {
   background-color: green;
-  color: black;
 }
 
 .incorrect {
   background-color: red;
-  color: black;
 }

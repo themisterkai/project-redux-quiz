@@ -1,31 +1,30 @@
 .progressBarContainer {
-    display: flex;
+  display: flex;
   flex-direction: column;
-    width: 100%;
+  width: 100%;
   align-items: center;
-  margin-top: 20px; 
+  margin: 20px 0px;
   padding-left: 2%;
   padding-right: 2%;
-   
-  }
-  
-  .progressBar {
-   width: 80%;
-    height: 15px; 
-    border: none;
-    border-radius: 15px; 
-    background-color: #f0f0f0; 
-   
-  }
-  
-  .progressBar::-webkit-progress-value {
-    background-color:   rgb(162, 244, 186);
+}
 
-    border-radius: 10px; 
-  }
-  
-  span {
-   
-    margin-top: 5px; 
-  }
-  
+.progressBar {
+  width: 80%;
+  height: 15px;
+  border: none;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+}
+
+.progressBar::-webkit-progress-bar {
+  border-radius: 10px;
+}
+
+.progressBar::-webkit-progress-value {
+  background-color: rgb(162, 244, 186);
+  border-radius: 10px;
+}
+
+span {
+  margin-top: 5px;
+}

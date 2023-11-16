@@ -7,14 +7,23 @@
   text-align: center;
 }
 
-.startPage button {
-  width: 200px;
-  height: 35px;
-  margin-top: 30px;
-}
-
 .quizInfo {
   gap: 5px;
   text-align: left;
   margin-left: 20px;
+}
+
+.startPage button {
+  width: 200px;
+  height: 35px;
+  margin-top: 30px;
+  border-radius: 15px;
+  background-color: rgb(214, 179, 0);
+  border: none;
+}
+
+.startPage button:hover {
+  background-color: rgb(0, 41, 107);
+  cursor: pointer;
+  color: white;
 }

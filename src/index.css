@@ -17,13 +17,14 @@ body {
   justify-content: center;
   margin: auto;
   background-color: rgb(17, 41, 107);
+  padding: 50px;
 }
 
 .main {
-  max-width: 650px;
-  width: 100vw;
+  /* max-width: 550px;
+  width: 100vw; */
   background-color: rgb(237, 237, 237);
-  margin-top: 50px;
+  margin: auto;
   color: rgb(17, 41, 107);
   font-family: "Montserrat", sans-serif;
 }
@@ -51,11 +52,33 @@ h2 {
 p {
   margin: 5px;
 }
-
+@media (max-width: 550px) {
+  .main {
+    max-width: 700px;
+    width: 80vw;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .startPage {
+    padding: 10px;
+  }
+  .questionPage {
+    min-height: 460px;
+  }
+}
+@media (min-width: 550px) and (max-width: 666px) {
+  .questionPage {
+    min-height: 550px;
+  }
+}
 @media (min-width: 667px) {
   .main {
     max-width: 900px;
-    width: 100vw;
+    width: 80vw;
   }
 }
 @media (min-width: 1025px) {

@@ -15,12 +15,12 @@ export const CurrentQuestion = () => {
 
   if (hasAnswers) {
     if (answers[currentQuestionIndex].isCorrect) {
-      imageURL = './correct.gif';
+      imageURL = `./correct/${question.id}.gif`;
     } else {
       if (answers[currentQuestionIndex].answer === 'not answered') {
-        imageURL = './timesup.gif';
+        imageURL = `./timesup/${question.id}.gif`;
       } else {
-        imageURL = './incorrect.gif';
+        imageURL = `./incorrect/${question.id}.gif`;
       }
     }
   }

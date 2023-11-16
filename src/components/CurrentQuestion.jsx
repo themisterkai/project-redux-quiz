@@ -11,7 +11,7 @@ export const CurrentQuestion = () => {
     return <h1>Oh no! I could not find the current question!</h1>;
   }
 
-  let imageURL = `./` + question.id + `.jpg`;
+  let imageURL = `./${question.id}.jpg`;
 
   if (hasAnswers) {
     if (answers[currentQuestionIndex].isCorrect) {

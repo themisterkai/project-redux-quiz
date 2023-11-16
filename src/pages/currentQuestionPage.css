@@ -2,20 +2,21 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
   text-align: center;
-  border: 1px solid black;
 }
+
 .questionText {
   width: 90%;
   margin: 0 auto;
 }
+
 .answerOptions {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin: 40px;
 }
+
 .answerOptions button {
   width: 95%;
   max-width: 350px;

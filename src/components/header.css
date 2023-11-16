@@ -1,14 +1,11 @@
 .headerContainer {
   display: flex;
   flex-direction: column;
-
-  border: 1px solid black;
   text-align: center;
 }
+
 .keepTrack {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
   align-items: center;
-  
 }

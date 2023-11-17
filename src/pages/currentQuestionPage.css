@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   text-align: center;
-  min-height: 700px;
+  min-height: 600px;
   height: 100%;
 }
 
@@ -39,10 +39,10 @@
   border-radius: 12px;
   background-color: rgb(0, 80, 157);
   color: white;
+  margin-top: 15px;
 }
 
 .answerOptions button:hover {
-  /* background-color: rgb(254, 204, 2); */
   opacity: 0.7;
   cursor: pointer;
   color: white;

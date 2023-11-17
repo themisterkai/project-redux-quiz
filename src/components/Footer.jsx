@@ -4,8 +4,8 @@ export const Footer = () => {
     <footer className="footer">
       <p>
         A project by <a href="https://github.com/filzasaleem">Filza Saleem,</a>{" "}
-        <a href="https://github.com/themisterkai">Kai Lee Hernandez</a>{" "}
-        <a href="https://github.com/Vardagsbruket">and Diana Undén</a>
+        <a href="https://github.com/themisterkai">Kai Lee Hernandez </a> and{" "}
+        <a href="https://github.com/Vardagsbruket">Diana Undén</a>
       </p>
     </footer>
   );

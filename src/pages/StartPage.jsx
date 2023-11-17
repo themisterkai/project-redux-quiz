@@ -23,11 +23,11 @@ export const StartPage = () => {
     <div className="startPage">
       <h1>Welcome to our quiz!</h1>
       <div className="quizInfo">
-        <p>Let`s test your knowledge about Sweden!</p>
+        <p>Let&apos;s test your knowledge about Sweden!</p>
         <p>
           You get 2 points per question if your answer is correct. If you answer
-          incorrectly or don`t answer a question before the timer runs out, you
-          loose a point.
+          incorrectly or don&apos;t answer a question before the timer runs out,
+          you loose a point.
         </p>
         <p>Good luck!</p>
         <p></p>

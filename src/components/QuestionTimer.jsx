@@ -1,25 +1,20 @@
-import { useEffect, useRef, useState } from "react";
-import { submitAnswer } from "../reducers/quiz";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useRef, useState } from 'react';
+import { submitAnswer } from '../reducers/quiz';
+import { useDispatch, useSelector } from 'react-redux';
 
 // This is the component that will display the timer for each question
 export const QuestionTimer = () => {
   const [timeLeft, setTimeLeft] = useState(10);
   const [timeIsUp, setTimeIsUp] = useState(false);
   const index = useSelector(
-    (state) => state.quiz.questions[state.quiz.currentQuestionIndex]
+    state => state.quiz.questions[state.quiz.currentQuestionIndex]
   );
-  // const answer = useSelector(
-  //   (state) =>
-  //     state.quiz.questions[state.quiz.currentQuestionIndex].correctAnswerIndex
-  // );
-  const notAnswered = 4;
 
   const dispatch = useDispatch();
   let intervalRef = useRef();
 
   const decreaseTimeLeft = () => {
-    setTimeLeft((prev) => (prev > 0 ? prev - 1 : prev));
+    setTimeLeft(prev => (prev > 0 ? prev - 1 : prev));
   };
 
   const loosePoint = () => {
@@ -52,7 +47,9 @@ export const QuestionTimer = () => {
 
   return (
     <div>
-      <p>Time left: {timeLeft} seconds</p>
+      <p>
+        Time left: {timeLeft} {timeLeft === 1 ? 'second' : 'seconds'}
+      </p>
     </div>
   );
 };

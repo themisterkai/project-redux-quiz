@@ -4,6 +4,10 @@
   </a>
 </h1>
 
+A project by Filza Saleem, Kai Lee Hernandez and Diana Undén.
+
+See it live: https://funn-quizz.netlify.app/
+
 # Redux Quiz
 
 Replace this readme with your own information about your project.

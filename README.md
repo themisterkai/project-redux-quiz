@@ -1,38 +1,38 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/redux-quiz.svg" alt="Project Banner Image">
-  </a>
-</h1>
 
-A project by Filza Saleem, Kai Lee Hernandez and Diana Undén.
+A collaborative project by [Filza Saleem](https://github.com/filzasaleem), [Kai Lee Hernandez](https://github.com/themisterkai) and [Diana Undén](https://github.com/Vardagsbruket).
 
-See it live: https://funn-quizz.netlify.app/
 
 # Redux Quiz
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this week the a multpile choice game app was created. The focus was getting familiar with redux. 
 
 ## Getting Started with the Project
 
 ### Dependency Installation & Startup Development Server
 
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
+Once cloned, navigate to the project's root directory. This project uses npm (Node Package Manager) to manage its dependencies.
 
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
+The following command combines installing dependencies, opening up the project on VS Code, and starting a development server on your terminal:
 
 ```bash
 npm i && code . && npm run dev
 ```
 
 ### The Problem
+The team initiated the project by creating a Trello work plan and a Figma design. Tasks were distributed among team members based on mutual understanding.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The app is a multiple-choice quiz game with a focus on getting familiar with Redux. The theme revolves around Swedish-related general questions, and multiple choices are provided to the user. Each question has a timer, and when it runs out, the correct answer is displayed. The quiz itself has a timer, and at the end, the app reveals how long the user took to complete the quiz. Correct and incorrect questions are clearly marked. Pictures and gifs  are added for clarity and fun. The quiz concludes with a summary page displaying the score and details of correct and incorrect questions.
+
+
+### technologies used
+1. react components
+2. recat redux
+3. react Hooks (useSelctor(),useDispatch(),useState(),useEffect())
+4. css
+5. responsive design
+
 
 ### View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+experience the quizz app live: [quiz-app](https://funn-quizz.netlify.app/)
 
 ## Instructions
 

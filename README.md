@@ -5,6 +5,9 @@ A collaborative project by [Filza Saleem](https://github.com/filzasaleem), [Kai 
 # Redux Quiz
 In this week the a multpile choice game app was created. The focus was getting familiar with redux. 
 
+### View it live
+experience the quizz app live: [quiz-app](https://funn-quizz.netlify.app/)
+
 ## Getting Started with the Project
 
 ### Dependency Installation & Startup Development Server
@@ -30,9 +33,6 @@ The app is a multiple-choice quiz game with a focus on getting familiar with Red
 4. css
 5. responsive design
 
-
-### View it live
-experience the quizz app live: [quiz-app](https://funn-quizz.netlify.app/)
 
 ## Instructions
 
